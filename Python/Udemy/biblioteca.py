@@ -1,0 +1,19 @@
+importar os
+importar tkinter como tk
+
+root = tk.Tk ()
+
+canvas1 = tk.Canvas (root, width = 300, height = 350, bg = 'lightsteelblue2', relief = 'elevado')
+canvas1.pack ()
+
+label1 = tk.Label (root, text = 'Atualizar PIP', bg = 'lightsteelblue2')
+label1.config (font = ('helvetica', 20))
+canvas1.create_window (150, 80, janela = rótulo1)
+
+def upgradePIP ():
+    os.system ('start cmd / k python.exe -m pip install --upgrade pip') 
+    
+button1 = tk.Button (text = 'Upgrade PIP', command = upgradePIP, bg = 'green', fg = 'white', font = ('helvetica', 12, 'bold'))
+canvas1.create_window (150, 180, janela = botão1)
+
+root.mainloop ()
